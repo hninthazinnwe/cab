@@ -1,0 +1,18 @@
+<h1>Edit Cab Detail</h1>
+
+<%= form_for @cab, :url =>{:action => "update", :id =>@cab} do |f| %>
+
+<p>Plate Number: <%= f.text_field 'plate_number' %></p>
+<p>Model: <%= f.text_field  'model' %></p>
+<p>Mile Age: <%= f.text_field  'mileage' %></p>
+
+
+<p><label for = "upload">Image Upload</label>:
+<%= file_field 'cab', 'car_photo'  %><p/><br/>
+
+<%= f.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'list' } %>
+
+

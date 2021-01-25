@@ -1,0 +1,8 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: @cabs) do |sheet|
+  sheet.add_row %w(plate_number model mileage)
+  @cabs.each do |cab|
+    sheet.add_row [cab.plate_number, cab.model, cab.mileage]
+  end
+end

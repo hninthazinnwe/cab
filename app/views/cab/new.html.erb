@@ -1,0 +1,20 @@
+<h1>Add new cab</h1>
+
+<%= form_tag :action => 'create' do %>
+
+<p><label for = "plate_number">Plate Number</label>:
+<%= text_field 'cab', 'plate_number' %></p>
+
+<p><label for = "model">Model</label>:
+<%= text_field 'cab', 'model' %></p>
+
+<p><label for = "mileage">Mile Age</label>:
+<%= text_field 'cab', 'mileage' %></p>
+
+<p><label for = "upload">Image Upload</label>:
+<%= file_field 'cab', 'car_photo'  %><p/><br/>
+
+<%= submit_tag "Create" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'list'} %>

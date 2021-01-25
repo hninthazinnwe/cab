@@ -1,0 +1,12 @@
+<h1><%= @cab.plate_number %></h1>
+
+<p>
+   <strong>Model: </strong> $<%= @cab.model %><br />
+   <strong>Mile Age :</strong> <%= @cab.mileage %><br />
+   <strong>Created Date:</strong> <%= @cab.created_at %><br />
+   <%= image_tag @cab.car_photo %> <%= @cab.car_photo %><br />
+</p>
+
+<hr />
+
+<%= link_to 'Back', {:action => 'list'} %>
